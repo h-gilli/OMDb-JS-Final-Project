@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Search</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/aff7ad4ccc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <i class="fa-solid fa-film" class="logo"></i> 
+      <span class="brand-name">Movie Search</span>
+    </div>
+
+    <!-- Hamburger icon for mobile -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <nav class="header-right" id="navLinks">
+      <a href="#">Movies</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="intro">
+      <h1>America's Top Platform for Finding Movies</h1>
+      <p class="subheading">Find your next favorite movie with <span class="green">Movie Search</span> </p>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search by Title or Keyword" />
+      <button onclick="searchMovies()">Search</button>
+    </div>
+
+    <div id="movieList" class="movie-list"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Movie Search. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
