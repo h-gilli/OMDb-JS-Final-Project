@@ -2,6 +2,9 @@ function searchMovies() {
   const query = document.getElementById("searchInput").value.trim().toLowerCase();
   const list = document.getElementById("movieList");
 
+  // Disable grid layout temporarily
+  list.classList.remove("movie-list");
+
   list.innerHTML = `
     <div class="spinner-container">
       <div class="loading-spinner"></div>
@@ -14,6 +17,8 @@ function searchMovies() {
         setTimeout(() => {
           if (data.Response === "True") {
             list.innerHTML = "";
+            list.classList.add("movie-list"); // Re-enable grid layout
+
             data.Search.forEach(movie => {
               const movieItem = document.createElement("div");
               movieItem.className = "movie";
@@ -36,11 +41,11 @@ function searchMovies() {
         }, 1000);
       });
   } else {
-    list.innerHTML = `<p>No movies found. Please try again.</p>`;
+    list.innerHTML = `<p class="center-message">We couldn't find a movie with that title. Please try again.</p>`;
   }
 }
 
-// ✅ Toggle hamburger menu for mobile
+// Toggle hamburger menu for mobile
 function toggleMenu() {
   document.getElementById("navLinks").classList.toggle("show");
 }

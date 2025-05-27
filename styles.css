@@ -168,7 +168,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 200px;
+  height: 250px;
 }
 
 .loading-spinner {
@@ -178,6 +178,18 @@ main {
   border-top-color: #333;
   border-radius: 50%;
   animation: spin 1s linear infinite;
+}
+
+/* Center Error Message */
+
+.center-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #444;
 }
 
 @keyframes spin {
