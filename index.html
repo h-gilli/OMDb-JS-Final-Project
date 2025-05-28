@@ -12,10 +12,7 @@
       <i class="fa-solid fa-film" class="logo"></i> 
       <span class="brand-name">Movie Search</span>
     </div>
-
-    <!-- Hamburger icon for mobile -->
     <div class="hamburger" onclick="toggleMenu()">☰</div>
-
     <nav class="header-right" id="navLinks">
       <a href="#">Movies</a>
       <a href="#">About Us</a>
@@ -26,15 +23,20 @@
   <main>
     <div class="intro">
       <h1>America's Top Platform for Finding Movies</h1>
-      <p class="subheading">Find your next favorite movie with <span class="green">Movie Search</span> </p>
+      <p class="subheading">Find your next favorite movie with Movie Search</p>
     </div>
 
     <div class="search-bar">
       <input type="text" id="searchInput" placeholder="Search by Title or Keyword" />
       <button onclick="searchMovies()">Search</button>
+      <select id="sortOrder" onchange="sortMovies()">
+        <option value="">Sort by Year</option>
+        <option value="newest">Newest to Oldest</option>
+        <option value="oldest">Oldest to Newest</option>
+      </select>
     </div>
 
-    <div id="movieList" class="movie-list"></div>
+    <div id="movieList"></div>
   </main>
 
   <footer>
