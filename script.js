@@ -2,7 +2,7 @@ function searchMovies() {
   const query = document.getElementById("searchInput").value.trim().toLowerCase();
   const list = document.getElementById("movieList");
 
-  // Disable grid layout temporarily
+  //remove to center spinner
   list.classList.remove("movie-list");
 
   list.innerHTML = `
@@ -17,7 +17,7 @@ function searchMovies() {
         setTimeout(() => {
           if (data.Response === "True") {
             list.innerHTML = "";
-            list.classList.add("movie-list"); // Re-enable grid layout
+            list.classList.add("movie-list"); 
 
             data.Search.forEach(movie => {
               const movieItem = document.createElement("div");
@@ -45,7 +45,7 @@ function searchMovies() {
   }
 }
 
-// Toggle hamburger menu for mobile
+
 function toggleMenu() {
   document.getElementById("navLinks").classList.toggle("show");
 }
